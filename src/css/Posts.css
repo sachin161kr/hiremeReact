@@ -1,0 +1,18 @@
+#post-body {
+  display: flex;
+  flex-direction: row;
+}
+
+.posts {
+  height: 250px;
+  margin: 20px;
+  text-align: left;
+  padding: 10px;
+  border: 2px solid black;
+}
+
+@media screen and (max-width: 900px) {
+  #post-body {
+    flex-direction: column;
+  }
+}
