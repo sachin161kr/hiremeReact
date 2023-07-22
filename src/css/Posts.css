@@ -1,10 +1,9 @@
 #post-body {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .posts {
-  height: 250px;
   margin: 20px;
   text-align: left;
   padding: 10px;

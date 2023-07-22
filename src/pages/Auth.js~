@@ -22,52 +22,42 @@ const Auth = () => {
 
   const login = async () => {
     console.log(email, password);
-    axios({
-      data: {
-        email: email,
-        password: password,
-      },
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      url: "http://demo-env-1.eba-dkupj2uf.ap-south-1.elasticbeanstalk.com/auth/login",
-    }).then((e) => {
-      if (e.data === "Login Successful") {
-        navigate("/posts");
-      } else {
-        alert("Login Failed");
+    await fetch(
+      "http://demo-env-1.eba-dkupj2uf.ap-south-1.elasticbeanstalk.com/auth/register",
+      {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify({
+          email: email,
+          password: password,
+        }),
       }
-      console.log(e.data);
+    ).then((e) => {
+      console.log(e);
     });
   };
 
   const register = () => {
-    axios({
-      data: {
-        name: name,
-        email: email,
-        password: password,
-      },
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      url: "http://demo-env-1.eba-dkupj2uf.ap-south-1.elasticbeanstalk.com/auth/register",
-    }).then((e) => {
-      if (e.data === "User Registered") {
-        toogle();
-        alert(e.data);
-      } else {
-        alert(e.data);
-      }
-      console.log(e.data);
-    });
+    axios
+      .post(
+        "http://demo-env-1.eba-dkupj2uf.ap-south-1.elasticbeanstalk.com/register",
+        {
+          name: name,
+          email: email,
+          password: password,
+        }
+      )
+      .then((e) => {
+        console.log(e);
+      });
   };
 
   return (
     <>
-      <h1>Welcome To HireMe Powered By @SpringBoot and AWS</h1>
+      <h1>Welcome To HireMe Powered By @SpringBoot</h1>
       <div id="auth-body">
         <div id="auth-form">
           {showName && (
@@ -110,7 +100,7 @@ const Auth = () => {
           )}
           {showName && (
             <>
-              <button onClick={register} className="btn">
+              <button onClick={toogle} className="btn">
                 Register
               </button>
               <button onClick={toogle} className="btn">

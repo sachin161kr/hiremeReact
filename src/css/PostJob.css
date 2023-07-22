@@ -1,0 +1,19 @@
+.post-job-div {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  max-width: 600px;
+  margin: 20px;
+}
+
+#input-desc {
+  height: 200px;
+  text-align: left;
+}
+
+.btn {
+  margin: 10px;
+  font-size: 18px;
+}
