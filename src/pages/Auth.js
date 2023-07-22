@@ -96,7 +96,8 @@ const Auth = () => {
           {!showName && (
             <button
               onClick={() => {
-                login();
+                // login();
+                navigate("/posts");
               }}
               className="btn"
             >
@@ -110,7 +111,7 @@ const Auth = () => {
           )}
           {showName && (
             <>
-              <button onClick={register} className="btn">
+              <button onClick={toogle} className="btn">
                 Register
               </button>
               <button onClick={toogle} className="btn">

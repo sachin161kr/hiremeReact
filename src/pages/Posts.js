@@ -7,7 +7,7 @@ import axios from "axios";
 const Posts = () => {
   const navigate = useNavigate();
 
-  const [jobs, setJobs] = useState([]);
+  // const [jobs, setJobs] = useState([]);
 
   const getPosts = () => {
     axios({
@@ -22,26 +22,26 @@ const Posts = () => {
     });
   };
 
-  useEffect(() => {
-    getPosts();
-  }, []);
+  // useEffect(() => {
+  //   getPosts();
+  // }, []);
 
-  // const jobs = [
-  //   {
-  //     id: 1,
-  //     title: "React Native Developer",
-  //     desc: "Do in culpa adipisicing nostrud eu tempor deserunt tempor occaecat labore quis proident esse. Qui ut quis officia veniam. Cillum ea exercitation qui sunt quis ipsum non cillum proident do incididunt sint id. Sint dolor sint ut incididunt magna fugiat cupidatat esse. Non eiusmod sint deserunt.",
-  //     skills: ["React", "React Native", "JavaScript"],
-  //     location: "Banglore",
-  //   },
-  //   {
-  //     id: 2,
-  //     title: "React Native Developer",
-  //     desc: "Dua in culpa adipisicing nostrud eu tempor deserunt tempor occaecat labore quis proident esse. Qui ut quis officia veniam. Cillum ea exercitation qui sunt quis ipsum non cillum proident do incididunt sint id. Sint dolor sint ut incididunt magna fugiat cupidatat esse.",
-  //     skills: ["React", "React Native", "JavaScript"],
-  //     location: "Banglore",
-  //   },
-  // ];
+  const jobs = [
+    {
+      id: 1,
+      title: "React Native Developer",
+      desc: "Do in culpa adipisicing nostrud eu tempor deserunt tempor occaecat labore quis proident esse. Qui ut quis officia veniam. Cillum ea exercitation qui sunt quis ipsum non cillum proident do incididunt sint id. Sint dolor sint ut incididunt magna fugiat cupidatat esse. Non eiusmod sint deserunt.",
+      skills: ["React", "React Native", "JavaScript"],
+      location: "Banglore",
+    },
+    {
+      id: 2,
+      title: "React Native Developer",
+      desc: "Dua in culpa adipisicing nostrud eu tempor deserunt tempor occaecat labore quis proident esse. Qui ut quis officia veniam. Cillum ea exercitation qui sunt quis ipsum non cillum proident do incididunt sint id. Sint dolor sint ut incididunt magna fugiat cupidatat esse.",
+      skills: ["React", "React Native", "JavaScript"],
+      location: "Banglore",
+    },
+  ];
 
   return (
     <>

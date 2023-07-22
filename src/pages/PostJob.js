@@ -68,7 +68,12 @@ const PostJob = () => {
           placeholder="Location"
         />
       </div>
-      <button onClick={addPost} className="btn">
+      <button
+        onClick={() => {
+          navigate("/posts");
+        }}
+        className="btn"
+      >
         Post Job
       </button>
     </>
