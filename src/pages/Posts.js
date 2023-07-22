@@ -7,20 +7,20 @@ import axios from "axios";
 const Posts = () => {
   const navigate = useNavigate();
 
-  // const [jobs, setJobs] = useState([]);
+  //const [jobs, setJobs] = useState([]);
 
-  const getPosts = () => {
-    axios({
-      method: "GET",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      url: "http://demo-env-1.eba-dkupj2uf.ap-south-1.elasticbeanstalk.com/posts/allPosts",
-    }).then((e) => {
-      console.log(e.data);
-      setJobs(e.data.reverse());
-    });
-  };
+  // const getPosts = () => {
+  //   axios({
+  //     method: "GET",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     url: "http://demo-env-1.eba-dkupj2uf.ap-south-1.elasticbeanstalk.com/posts/allPosts",
+  //   }).then((e) => {
+  //     console.log(e.data);
+  //     setJobs(e.data.reverse());
+  //   });
+  // };
 
   // useEffect(() => {
   //   getPosts();
